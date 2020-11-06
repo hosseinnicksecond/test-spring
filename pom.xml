@@ -2,14 +2,12 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>guru.springframework.petclinic</groupId>
-    <artifactId>tb2g-testing-spring</artifactId>
+    <groupId>home.train</groupId>
+    <artifactId>test-spring</artifactId>
     <version>5.1.0</version>
 
-    <name>tb2g-testing-spring</name>
     <packaging>war</packaging>
-    <description>*** FORK FROM ORIGINAL SPRING PROJECT TO DEMO TESTING FEATURES OF SPRING *** A Spring Framework application based on JSP, Spring MVC, Spring Data JPA, Hibernate and JDBC</description>
-    <url>https://github.com/spring-petclinic/</url>
+
 
     <properties>
         <!-- Generic properties -->
@@ -20,18 +18,18 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- Spring -->
-        <spring-framework.version>5.1.4.RELEASE</spring-framework.version>
+        <spring-framework.version>5.2.10.RELEASE</spring-framework.version>
         <spring-data-jdbc.version>2.0.0.M1</spring-data-jdbc.version>
 
         <!-- Web dependencies -->
         <!-- Version update should also be done in wro.xml, petclinic.less and static resources: htmlHeader.tag and footer.tag-->
-        <webjars-bootstrap.version>3.4.0</webjars-bootstrap.version>
+        <webjars-bootstrap.version>4.5.3</webjars-bootstrap.version>
         <webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
         <webjars-jquery.version>2.2.4</webjars-jquery.version>
         <wro4j.version>1.8.0</wro4j.version>
 
         <!-- Java EE / Java SE dependencies -->
-        <tomcat.version>9.0.14</tomcat.version>
+        <tomcat.version>9.0.39</tomcat.version>
         <jaxb.version>2.3.0</jaxb.version>
         <activation.version>1.1.1</activation.version>
         <servlet-api.version>4.0.1</servlet-api.version>
@@ -51,12 +49,12 @@
         <!-- Test -->
         <assertj.version>3.11.1</assertj.version>
         <json-path.version>2.4.0</json-path.version>
-        <mockito.version>2.23.4</mockito.version>
+        <mockito.version>3.6.0</mockito.version>
         <hamcrest.version>1.3</hamcrest.version>
-        <junit-jupiter.version>5.3.2</junit-jupiter.version>
+        <junit-jupiter.version>5.7.0</junit-jupiter.version>
 
         <!-- Others -->
-        <jackson.version>2.9.8</jackson.version>
+        <jackson.version>2.11.2</jackson.version>
         <aspectj.version>1.9.1</aspectj.version>
 
         <!-- Maven plugins -->
@@ -130,7 +128,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jdbc-core</artifactId>
-            <version>${spring-data-jdbc.version}</version>
+            <version>1.2.1.RELEASE</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework</groupId>
@@ -351,7 +349,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.2</version>
+                <version>3.3.0</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
@@ -359,7 +357,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.3.0</version>
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
